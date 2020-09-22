@@ -80,7 +80,7 @@ client.on('message', message=>{
         case 'People':
             const embed = new Discord.MessageEmbed()
             .setTitle('Contest people')
-            .addField('People', 'The Current Contestants Are Ro Nation, Syntheziz, Ghostly, Adiyn, Exile, Murchees')
+            .addField('People', 'The Current Contestants Are Ro Nation, Syntheziz, Ghostly, Adiyn, Exile, Murchees, JoJo, Oveo')
             .addField('Other Info', '| This list will be updated when a new person enters the contest | note it may take a few minutes for the list to update')
             .setColor('#09FF00')
 
