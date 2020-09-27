@@ -51,6 +51,30 @@ client.on('message', message=>{
     }
 })
 
+bot.on('message', message=>{
+
+    const user = message.mentions.users.first();
+
+    let args = message.content.slice(PREFIX.length).split(' ');
+
+    switch(args[0]){
+        case 'warn':
+            const embed = new Discord.MessageEmbed()
+            .setTitle('You Have Been Warned')
+            .setDescription('You Have Been Warned In The GPN Server. This Is The List Of Levels')
+            .addField('Demote', '2 Warns And You Get Demoted')
+            .addField('Mute', '3 Warns And You Get A Mute')
+            .addField('Kick', '4 Warns And You Get A Kick From The Server')
+            .addField('Ban', '5 Warns And You Get A Ban')
+            .setColor('#00FFF2')
+            
+            message.mentions.members.first().send(embed);
+        break;
+
+
+    }
+})
+
 client.on('message', message=>{
 
     let args = message.content.slice(prefix.length).split(' ');
